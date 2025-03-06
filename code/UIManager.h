@@ -22,5 +22,4 @@ void ShowGameOverArt();
 // 显示游戏胜利（到达终点）时的艺术字
 void ShowVictoryArt();
 
-// 显示进度条动画，约持续十秒钟
-void ShowLoadingAnimation();
+

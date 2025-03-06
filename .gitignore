@@ -4,4 +4,5 @@
 MazeExplorer/x64/Debug
 /.vscode
 /coin
- 
+.obsidian/  
+docs/ClassDiagram.md
