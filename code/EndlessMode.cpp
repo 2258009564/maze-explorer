@@ -186,6 +186,9 @@ void EndlessMode::SetupLevelDifficulty(GameController &game)
 // 运行无尽模式
 void EndlessMode::Run()
 {
+    // 设置窗口标题
+    SetConsoleTitle(L"MazeExplorer -无尽模式");
+    
     if (!GetPlayerName())
     {
         return; // 用户取消了输入

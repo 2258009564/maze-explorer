@@ -201,6 +201,9 @@ pair<int, int> GameController::findSafeLocation()
 // 运行游戏主循环
 void GameController::run()
 {
+    // 设置窗口标题
+    SetConsoleTitle(L"MazeExplorer -游戏进行中！");
+
     // 初始显示一次迷宫和技能信息
     system("cls");
     displayMaze(maze, playerX, playerY, enemies);

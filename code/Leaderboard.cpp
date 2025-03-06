@@ -171,6 +171,8 @@ bool SaveScore(const string &playerName, int score)
 // 显示排行榜
 void ShowLeaderboard()
 {
+    // 设置窗口标题
+    SetConsoleTitle(L"MazeExplorer -排行榜");
     // 确保排行榜文件存在
     InitializeLeaderboard();
 
