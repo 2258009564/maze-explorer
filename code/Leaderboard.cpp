@@ -5,12 +5,53 @@
 #include <iomanip>
 #include <ctime>
 #include <cstring>
-#include <direct.h> 
+#include <direct.h>
 
 using namespace std;
 
-// 排行榜文件名 - 使用绝对路径确保一致性
-const string LEADERBOARD_FILE = "./leaderboard.dat";
+// 获取排行榜文件路径 - 使用可执行文件所在目录
+string GetLeaderboardFilePath()
+{
+    char exePath[MAX_PATH];
+    GetModuleFileNameA(NULL, exePath, MAX_PATH);
+
+    // 获取目录路径（去掉文件名部分）
+    string path(exePath);
+    size_t lastSlash = path.find_last_of("\\/");
+    if (lastSlash != string::npos)
+    {
+        path = path.substr(0, lastSlash + 1);
+    }
+
+    return path + "leaderboard.dat";
+}
+
+// 初始化排行榜文件 - 如果文件不存在则创建
+void InitializeLeaderboard()
+{
+    string filepath = GetLeaderboardFilePath();
+
+    // 检查文件是否存在
+    ifstream fileCheck(filepath);
+    if (!fileCheck)
+    {
+        // 文件不存在，创建一个空文件
+        ofstream newFile(filepath, ios::binary);
+        if (!newFile)
+        {
+            cerr << "无法创建排行榜文件！路径：" << filepath << endl;
+        }
+        else
+        {
+            cout << "排行榜文件已创建：" << filepath << endl;
+            newFile.close();
+        }
+    }
+    else
+    {
+        fileCheck.close();
+    }
+}
 
 // 获取当前日期时间字符串
 string GetCurrentDateTimeString()
@@ -28,8 +69,10 @@ string GetCurrentDateTimeString()
 // 检查排行榜文件是否可写
 bool IsLeaderboardWritable()
 {
+    string filepath = GetLeaderboardFilePath();
+
     // 尝试打开文件进行写入
-    ofstream testFile(LEADERBOARD_FILE, ios::binary | ios::app);
+    ofstream testFile(filepath, ios::binary | ios::app);
     if (!testFile.is_open())
     {
         return false;
@@ -41,18 +84,22 @@ bool IsLeaderboardWritable()
 // 保存分数到排行榜
 bool SaveScore(const string &playerName, int score)
 {
+    // 确保排行榜文件存在
+    InitializeLeaderboard();
+
     // 检查排行榜文件是否可写
     if (!IsLeaderboardWritable())
     {
         cerr << "排行榜文件无法写入！" << endl;
         return false;
-    } 
-    
+    }
+
+    string filepath = GetLeaderboardFilePath();
     vector<ScoreRecord> records;
     bool playerExists = false;
 
     // 读取现有记录
-    ifstream inFile(LEADERBOARD_FILE, ios::binary);
+    ifstream inFile(filepath, ios::binary);
     if (inFile.is_open())
     {
         ScoreRecord record;
@@ -105,7 +152,7 @@ bool SaveScore(const string &playerName, int score)
     }
 
     // 保存回文件
-    ofstream outFile(LEADERBOARD_FILE, ios::binary | ios::trunc);
+    ofstream outFile(filepath, ios::binary | ios::trunc);
     if (!outFile.is_open())
     {
         cerr << "无法创建排行榜文件！" << endl;
@@ -124,6 +171,9 @@ bool SaveScore(const string &playerName, int score)
 // 显示排行榜
 void ShowLeaderboard()
 {
+    // 确保排行榜文件存在
+    InitializeLeaderboard();
+
     system("cls");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -152,14 +202,15 @@ void ShowLeaderboard()
     cout << "    -----------------------------------------------------" << endl;
 
     // 读取排行榜
+    string filepath = GetLeaderboardFilePath();
     vector<ScoreRecord> records;
-    ifstream inFile(LEADERBOARD_FILE, ios::binary);
+    ifstream inFile(filepath, ios::binary);
 
     if (!inFile.is_open())
     {
         SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
         cout << "\n                   排行榜文件无法打开！\n";
-        cout << "                   文件路径：" << LEADERBOARD_FILE << "\n\n";
+        cout << "                   文件路径：" << filepath << "\n\n";
         SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     }
     else

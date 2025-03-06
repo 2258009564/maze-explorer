@@ -14,6 +14,12 @@ struct ScoreRecord
     char date[20]; // 固定大小的字符数组，存储日期时间
 };
 
+// 初始化排行榜文件 - 如果文件不存在则创建
+void InitializeLeaderboard();
+
+// 获取排行榜文件路径
+std::string GetLeaderboardFilePath();
+
 // 保存分数到排行榜
 bool SaveScore(const std::string &playerName, int score);
 

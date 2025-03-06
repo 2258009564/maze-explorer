@@ -19,28 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\EndlessMode.cpp" />
-    <ClCompile Include="..\Enemy.cpp" />
-    <ClCompile Include="..\GameController.cpp" />
-    <ClCompile Include="..\Leaderboard.cpp" />
-    <ClCompile Include="..\main.cpp" />
-    <ClCompile Include="..\MazeGenerator.cpp" />
-    <ClCompile Include="..\Menu.cpp" />
-    <ClCompile Include="..\PathFinder.cpp" />
-    <ClCompile Include="..\Skill.cpp" />
-    <ClCompile Include="..\UIManager.cpp" />
+    <ClCompile Include="..\code\EndlessMode.cpp" />
+    <ClCompile Include="..\code\Enemy.cpp" />
+    <ClCompile Include="..\code\GameController.cpp" />
+    <ClCompile Include="..\code\Leaderboard.cpp" />
+    <ClCompile Include="..\code\main.cpp" />
+    <ClCompile Include="..\code\MazeGenerator.cpp" />
+    <ClCompile Include="..\code\Menu.cpp" />
+    <ClCompile Include="..\code\PathFinder.cpp" />
+    <ClCompile Include="..\code\Skill.cpp" />
+    <ClCompile Include="..\code\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CommonDefs.h" />
-    <ClInclude Include="..\EndlessMode.h" />
-    <ClInclude Include="..\Enemy.h" />
-    <ClInclude Include="..\GameController.h" />
-    <ClInclude Include="..\Leaderboard.h" />
-    <ClInclude Include="..\MazeGenerator.h" />
-    <ClInclude Include="..\Menu.h" />
-    <ClInclude Include="..\PathFinder.h" />
-    <ClInclude Include="..\Skill.h" />
-    <ClInclude Include="..\UIManager.h" />
+    <ClInclude Include="..\code\CommonDefs.h" />
+    <ClInclude Include="..\code\EndlessMode.h" />
+    <ClInclude Include="..\code\Enemy.h" />
+    <ClInclude Include="..\code\GameController.h" />
+    <ClInclude Include="..\code\Leaderboard.h" />
+    <ClInclude Include="..\code\MazeGenerator.h" />
+    <ClInclude Include="..\code\Menu.h" />
+    <ClInclude Include="..\code\PathFinder.h" />
+    <ClInclude Include="..\code\Skill.h" />
+    <ClInclude Include="..\code\UIManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

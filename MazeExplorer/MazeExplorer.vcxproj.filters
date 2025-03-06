@@ -15,66 +15,66 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\EndlessMode.cpp">
+    <ClCompile Include="..\code\EndlessMode.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\Enemy.cpp">
+    <ClCompile Include="..\code\Enemy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\GameController.cpp">
+    <ClCompile Include="..\code\GameController.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\Leaderboard.cpp">
+    <ClCompile Include="..\code\Leaderboard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\main.cpp">
+    <ClCompile Include="..\code\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\MazeGenerator.cpp">
+    <ClCompile Include="..\code\MazeGenerator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\Menu.cpp">
+    <ClCompile Include="..\code\Menu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\PathFinder.cpp">
+    <ClCompile Include="..\code\PathFinder.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\Skill.cpp">
+    <ClCompile Include="..\code\Skill.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\UIManager.cpp">
+    <ClCompile Include="..\code\UIManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CommonDefs.h">
+    <ClInclude Include="..\code\CommonDefs.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\EndlessMode.h">
+    <ClInclude Include="..\code\EndlessMode.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\Enemy.h">
+    <ClInclude Include="..\code\Enemy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\GameController.h">
+    <ClInclude Include="..\code\GameController.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\Leaderboard.h">
+    <ClInclude Include="..\code\Leaderboard.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\MazeGenerator.h">
+    <ClInclude Include="..\code\MazeGenerator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\Menu.h">
+    <ClInclude Include="..\code\Menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\PathFinder.h">
+    <ClInclude Include="..\code\PathFinder.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\Skill.h">
+    <ClInclude Include="..\code\Skill.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\UIManager.h">
+    <ClInclude Include="..\code\UIManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
