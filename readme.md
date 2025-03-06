@@ -5,7 +5,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Language: C++](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)](https://isocpp.org/)
   [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-brightgreen.svg)](https://www.microsoft.com/windows)
-  [![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/yourusername/mazeexplorer)
+  [![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/2258009564/mazeexplorer)
 </div>
 
 <p align="center"><i>穿梭迷宫、击败敌人、探索未知 - 控制台游戏的全新境界</i></p>
@@ -37,21 +37,22 @@
 
 ## 🎯 游戏模式详解
 
+<div align="center">
 <table>
-  <tr>
+<tr>
     <th width="50%">🏰 经典模式</th>
     <th width="50%">⏱️ 无尽模式</th>
-  </tr>
-  <tr>
+</tr>
+<tr>
     <td>
-      挑战完美平衡的迷宫难题，玩家可自定义迷宫规模与敌人密度，打造专属游戏体验。战略规划每一步，最终抵达终点获得胜利。
+    挑战完美平衡的迷宫难题，玩家可自定义迷宫规模与敌人密度，打造专属游戏体验。战略规划每一步，最终抵达终点获得胜利。
     </td>
     <td>
-      在不断演化的迷宫中挑战自我极限，随时间推移难度指数级增长，敌人变得更加凶猛迅捷。你能创造多高的分数，在排行榜上留名？
+    在不断演化的迷宫中挑战自我极限，随时间推移难度指数级增长，敌人变得更加凶猛迅捷。你能创造多高的分数，在排行榜上留名？
     </td>
-  </tr>
+</tr>
 </table>
-
+</div>
 ## ⌨️ 操作指南
 
 |    按键     | 功能                    |
@@ -124,10 +125,10 @@
 2. 使用 Visual Studio 或其他 C++编译器编译项目
 3. 运行生成的可执行文件
 
-## 项目结构
+## 🗂️ 项目结构
 
 ```
-alisagame/
+maze-explorer/
 ├── main.cpp                // 程序入口点
 ├── GameController.h/cpp    // 游戏主控制器
 ├── UIManager.h/cpp         // 用户界面管理
@@ -152,11 +153,11 @@ alisagame/
 > 💭 _"代码就像迷宫，每一行都是通向创意的路径!"_
 
 ## 联系
+
 如果你喜欢这个游戏，或者有任何建议和反馈，请别犹豫，马上联系我吧！我总是很乐意听到玩家的声音！✨
 
 📧 **Email**: [alisa2258009564@gmail.com](mailto:alisa2258009564@gmail.com)  
-💻 **GitHub**: [@2258009564](https://github.com/2258009564)  
- 
+💻 **GitHub**: [@2258009564](https://github.com/2258009564)
 
 ---
 
