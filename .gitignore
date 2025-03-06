@@ -1,4 +1,6 @@
 /.vs
-/MazeExplorer
+/MazeExplorer/.vs
+/MazeExplorer/MazeExplorer
+/MazeExplorer/x64
 /.vscode
 /coin
