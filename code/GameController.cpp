@@ -50,7 +50,7 @@ bool GameController::getMazeSize()
     // 循环直到获取有效输入
     while (!validInput)
     {
-        cout << "请输入迷宫的行数和列数（例如: 10 10）: ";
+        cout << "请输入迷宫的行数和列数 迷宫将按照 (2 * rows + 1) x (2 * cols + 1) 的形式生成: ";
         cin >> rows >> cols;
 
         if (rows < 5 || cols < 5) // 增加最小尺寸限制，确保有足够空间
@@ -74,10 +74,7 @@ bool GameController::setupEnemies()
 {
     // 根据迷宫大小计算最大敌人数量
     maxEnemies = sqrt(rows * cols) / 2;
-    if (maxEnemies < 1)
-        maxEnemies = 1;
-    if (maxEnemies > 10)
-        maxEnemies = 10; // 设置上限
+    maxEnemies = max(maxEnemies, 1);
 
     bool validInput = false;
 
@@ -139,13 +136,13 @@ bool GameController::generateAndValidateMaze()
         if (pathLength == -1)
         {
             cout << "正在重新生成可达的迷宫..." << endl;
-            this_thread::sleep_for(chrono::milliseconds(500));
+            this_thread::sleep_for(chrono::milliseconds(50));
         }
         // 确保路径有足够的复杂度 - 至少是迷宫尺寸的两倍
         else if (pathLength < (rows + cols))
         {
             cout << "正在增加迷宫复杂度..." << endl;
-            this_thread::sleep_for(chrono::milliseconds(500));
+            this_thread::sleep_for(chrono::milliseconds(50));
             pathLength = -1; // 强制重新生成
         }
     } while (pathLength == -1);
